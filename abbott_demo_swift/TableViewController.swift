@@ -117,11 +117,16 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath) as! TableViewCell
 //        let currentFileParts = extractAndBreakFilenameInComponents(fileURL: fileURLs[indexPath.row])
 //        cell.textLabel?.text = currentFileParts.fileName
 //        cell.detailTextLabel?.text = getFileTypeFromFileExtension(fileExtension: currentFileParts.fileExtension)
-        
+        cell.fileName.text = data_list[indexPath.row].file_name
+        var tag_str = ""
+        for tas_text in data_list[indexPath.row].tags{
+            tag_str = "\(tag_str)  \(tas_text)"
+        }
+        cell.fileLabel.text = tag_str
         return cell
     }
     

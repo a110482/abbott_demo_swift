@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="KPq-vP-St5" kind="embed" id="h8w-VN-aat"/>
+                                    <segue destination="KPq-vP-St5" kind="embed" identifier="table_segue" id="h8w-VN-aat"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -39,7 +39,7 @@
                     </view>
                     <connections>
                         <outlet property="search_bar" destination="je3-El-oAv" id="QcG-A0-uAD"/>
-                        <outlet property="tableview" destination="xA1-Vi-GQE" id="ACJ-xD-c0K"/>
+                        <outlet property="tableview" destination="xA1-Vi-GQE" id="TBV-WZ-2By"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ny-jU-tnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,11 +55,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fileListCell" selectionStyle="default" indentationWidth="10" id="Nxu-78-0m4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fileListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileListCell" id="Nxu-78-0m4" customClass="TableViewCell" customModule="abbott_demo_swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxu-78-0m4" id="iNa-7u-gCw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-yj-6og">
@@ -86,6 +86,10 @@
                                         <constraint firstItem="urS-Ts-tdn" firstAttribute="top" secondItem="hHZ-yj-6og" secondAttribute="bottom" id="ncJ-QH-AMz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fileLabel" destination="urS-Ts-tdn" id="8PJ-TN-jPF"/>
+                                    <outlet property="fileName" destination="hHZ-yj-6og" id="Ud0-06-xUC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
