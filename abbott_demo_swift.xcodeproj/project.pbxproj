@@ -467,6 +467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HS2232BLN;
 				INFOPLIST_FILE = abbott_demo_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "elijah.abbott-demo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -480,6 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HS2232BLN;
 				INFOPLIST_FILE = abbott_demo_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "elijah.abbott-demo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +566,7 @@
 				CFB003F71F554A80003D836A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFB003F81F554A80003D836A /* Build configuration list for PBXNativeTarget "abbott_demo_swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +575,7 @@
 				CFB003FA1F554A80003D836A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFB003FB1F554A80003D836A /* Build configuration list for PBXNativeTarget "abbott_demo_swiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +584,7 @@
 				CFB003FD1F554A80003D836A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
