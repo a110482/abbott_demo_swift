@@ -43,9 +43,9 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
     var fileURLs = [NSURL]()
     
     func prepareFileURLs() {
-        for file in data_list.file_name {
-            let fileParts = file.components(separatedBy:".")
-            if let fileURL = Bundle.main.url(forResource: fileParts[0], withExtension: fileParts[1]) {
+        for file in data_list {
+            let fileParts = file.file_name?.components(separatedBy:".")
+            if let fileURL = Bundle.main.url(forResource: fileParts?[0], withExtension: fileParts?[1]) {
                 if FileManager.default.fileExists(atPath: fileURL.path) {
                     fileURLs.append(fileURL as NSURL)
                 }
