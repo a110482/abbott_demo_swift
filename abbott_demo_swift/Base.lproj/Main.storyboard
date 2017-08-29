@@ -88,6 +88,10 @@
                                         <constraint firstItem="urS-Ts-tdn" firstAttribute="top" secondItem="hHZ-yj-6og" secondAttribute="bottom" id="ncJ-QH-AMz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fileLabel" destination="urS-Ts-tdn" id="8PJ-TN-jPF"/>
+                                    <outlet property="fileName" destination="hHZ-yj-6og" id="Ud0-06-xUC"/>
+                                </connections>
                                 <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
