@@ -16,4 +16,5 @@ class TableViewCell: UITableViewCell {
 struct TableViewCell_type {
     var file_name:String?
     var tags:Array<String>
+    var file_path:String?
 }
