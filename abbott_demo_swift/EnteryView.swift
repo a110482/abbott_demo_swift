@@ -26,7 +26,7 @@ class EntryView:UIViewController, UISearchBarDelegate{
             Http_Center().request_data("get_query_advice", send_dic: send_dic as Dictionary<String, AnyObject>, InViewAct: { (return_dic:Dictionary<String, AnyObject>?) in
                 if return_dic != nil{
                     for unit in return_dic!["result_list"] as! Array<Dictionary<String,String>>{
-                        print(unit["flie_name"])
+                        print(unit["file_name"])
                         print(unit["tags"])
                     }
                 }

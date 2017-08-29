@@ -22,6 +22,10 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    func update_date(new_data_list:Array<Dictionary<String,AnyObject>>){
+        
+    }
+    
     // ET AREA ====================
     // "cell did select" & "prepare segue" 我要用  不要重複 call
     
