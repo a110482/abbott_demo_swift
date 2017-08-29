@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 class TableViewCell: UITableViewCell {
     //out_let
+    @IBOutlet var fileName:UILabel!
+    @IBOutlet var fileLabel:UILabel!
     
 }
 

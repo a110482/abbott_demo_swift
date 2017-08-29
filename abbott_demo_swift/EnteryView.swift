@@ -28,6 +28,7 @@ class EntryView:UIViewController, UISearchBarDelegate{
                 if return_dic != nil{
                     print((return_dic!["result_list"] as! Array<Dictionary<String,AnyObject>>).count)
                     for unit in return_dic!["result_list"] as! Array<Dictionary<String,AnyObject>>{
+                        print(unit["file_path"])
                         print(unit["file_name"])
                         print(unit["tags"])
                     }

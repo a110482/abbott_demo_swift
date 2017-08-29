@@ -11,8 +11,11 @@ import QuickLook
 import Foundation
 
 class TableViewController: UITableViewController, QLPreviewControllerDataSource, QLPreviewControllerDelegate, UISearchBarDelegate {
+    @IBOutlet weak var tblFileList: UITableView!
     var data_list:Array<TableViewCell_type> = []
-    
+    var fileURLs = [NSURL]()
+    let quickLookController = QLPreviewController()
+    let fileNames = ["AppCoda-PDF.pdf", "AppCoda-Pages.pages", "AppCoda-Word.docx", "AppCoda-Keynote.key", "AppCoda-Text.txt", "AppCoda-Image.jpeg","AppCoda-PDF-kopia.pdf","SamplePDFFile_5mb.pdf","AppCoda-Ppt.ppt"  ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,7 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
         navigationItem.title = "File Search Demo"
         quickLookController.dataSource = self
         quickLookController.delegate = self
-        prepareFileURLs()
+        //prepareFileURLs()
         present(quickLookController, animated: true, completion: nil)
     }
     
@@ -33,30 +36,17 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
         return fileURLs[index]
     }
-    
-    let quickLookController = QLPreviewController()
-    
-    @IBOutlet weak var tblFileList: UITableView!
-    
-    let fileNames = ["AppCoda-PDF.pdf", "AppCoda-Pages.pages", "AppCoda-Word.docx", "AppCoda-Keynote.key", "AppCoda-Text.txt", "AppCoda-Image.jpeg","AppCoda-PDF-kopia.pdf","SamplePDFFile_5mb.pdf","AppCoda-Ppt.ppt"  ]
-    
-    var fileURLs = [NSURL]()
-    
     func prepareFileURLs() {
+        fileURLs = []
         for file in data_list {
-            let fileParts = file.file_name?.components(separatedBy:".")
-            if let fileURL = Bundle.main.url(forResource: fileParts?[0], withExtension: fileParts?[1]) {
+            let fileParts = file.file_path?.components(separatedBy:".")
+            let fileParts2 = "http://127.0.0.1:8000/" + fileParts![0]
+            if let fileURL = Bundle.main.url(forResource: fileParts2, withExtension: fileParts?[1]) {
                 if FileManager.default.fileExists(atPath: fileURL.path) {
                     fileURLs.append(fileURL as NSURL)
                 }
             }
         }
-    }
-    func fff(){
-        for data_s in data_list{
-            print(data_s.file_name)
-        }
-        
     }
     
     func previewControllerWillDismiss(_ controller: QLPreviewController) {
@@ -127,11 +117,10 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "idCellFile", for: indexPath)
-        let currentFileParts = extractAndBreakFilenameInComponents(fileURL: fileURLs[indexPath.row])
-        
-        cell.textLabel?.text = currentFileParts.fileName
-        cell.detailTextLabel?.text = getFileTypeFromFileExtension(fileExtension: currentFileParts.fileExtension)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath)
+//        let currentFileParts = extractAndBreakFilenameInComponents(fileURL: fileURLs[indexPath.row])
+//        cell.textLabel?.text = currentFileParts.fileName
+//        cell.detailTextLabel?.text = getFileTypeFromFileExtension(fileExtension: currentFileParts.fileExtension)
         
         return cell
     }
@@ -158,6 +147,7 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
             )
             data_list.append(temp_obj)
         }
+        prepareFileURLs()
         self.tableView.reloadData()
     }
     
