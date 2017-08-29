@@ -20,12 +20,14 @@ class EntryView:UIViewController, UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.characters.count >= 2{
+            
             let send_dic = [
                 "search_text": searchText
             ]
             Http_Center().request_data("get_query_advice", send_dic: send_dic as Dictionary<String, AnyObject>, InViewAct: { (return_dic:Dictionary<String, AnyObject>?) in
                 if return_dic != nil{
-                    for unit in return_dic!["result_list"] as! Array<Dictionary<String,String>>{
+                    print((return_dic!["result_list"] as! Array<Dictionary<String,AnyObject>>).count)
+                    for unit in return_dic!["result_list"] as! Array<Dictionary<String,AnyObject>>{
                         print(unit["file_name"])
                         print(unit["tags"])
                     }
