@@ -149,6 +149,7 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
     }
     
     func update_date(new_data_list:Array<Dictionary<String,AnyObject>>){
+        data_list = []
         for datas in new_data_list{
             let temp_obj = TableViewCell_type(
                 file_name: datas["file_name"] as? String,
