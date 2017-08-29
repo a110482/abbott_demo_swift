@@ -52,7 +52,12 @@ class TableViewController: UITableViewController, QLPreviewControllerDataSource,
             }
         }
     }
-    
+    func fff(){
+        for data_s in data_list{
+            print(data_s.file_name)
+        }
+        
+    }
     
     func previewControllerWillDismiss(_ controller: QLPreviewController) {
         print("The Preview Controller will be dismissed.")
