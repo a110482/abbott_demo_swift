@@ -57,6 +57,124 @@
             </objects>
             <point key="canvasLocation" x="-1801" y="-188"/>
         </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="VGn-G8-xKV">
+            <objects>
+                <tableViewController id="eqx-Kg-neW" customClass="HistoryTableViewController" customModule="abbott_demo_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0q5-lz-EQC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fileListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileListCell" id="fzx-d5-w2F" customClass="TableViewCell" customModule="abbott_demo_swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fzx-d5-w2F" id="OAB-WB-NfU">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-Aq-RDk">
+                                            <rect key="frame" x="8" y="2" width="1008" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hOa-iF-8nx">
+                                            <rect key="frame" x="16" y="19" width="1008" height="22.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.52941176469999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59660560340000002" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hOa-iF-8nx" firstAttribute="leading" secondItem="SHx-Aq-RDk" secondAttribute="leading" constant="8" id="1bG-Fb-FNq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SHx-Aq-RDk" secondAttribute="trailing" id="2pp-Lv-e1Q"/>
+                                        <constraint firstItem="hOa-iF-8nx" firstAttribute="top" secondItem="SHx-Aq-RDk" secondAttribute="bottom" id="B1A-z0-TnI"/>
+                                        <constraint firstItem="hOa-iF-8nx" firstAttribute="width" secondItem="SHx-Aq-RDk" secondAttribute="width" id="CBk-Z8-h8H"/>
+                                        <constraint firstAttribute="bottom" secondItem="hOa-iF-8nx" secondAttribute="bottom" constant="2" id="NVa-df-qPS"/>
+                                        <constraint firstItem="SHx-Aq-RDk" firstAttribute="leading" secondItem="OAB-WB-NfU" secondAttribute="leadingMargin" id="Z1M-qb-n5H"/>
+                                        <constraint firstItem="SHx-Aq-RDk" firstAttribute="top" secondItem="OAB-WB-NfU" secondAttribute="top" constant="2" id="eje-R2-tX5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="fileLabel" destination="hOa-iF-8nx" id="SAf-wW-L8U"/>
+                                    <outlet property="fileName" destination="SHx-Aq-RDk" id="PM8-3M-tOJ"/>
+                                    <segue destination="iqG-nq-0xX" kind="show" id="jTM-dF-LA1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eqx-Kg-neW" id="zd2-nm-EJK"/>
+                            <outlet property="delegate" destination="eqx-Kg-neW" id="bFz-li-JHL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqs-vL-m9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1127" y="-188"/>
+        </scene>
+        <!--Local File Table View Controller-->
+        <scene sceneID="toN-J6-cVU">
+            <objects>
+                <tableViewController id="Tgw-ea-D85" customClass="LocalFileTableViewController" customModule="abbott_demo_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nRN-79-B3y">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fileListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileListCell" id="gbB-Lm-ndZ" customClass="TableViewCell" customModule="abbott_demo_swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbB-Lm-ndZ" id="ZeT-Z4-j8L">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-Qz-Lz7">
+                                            <rect key="frame" x="8" y="2" width="1008" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hid-5K-ph3">
+                                            <rect key="frame" x="16" y="19" width="1008" height="22.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.52941176469999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59660560340000002" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hid-5K-ph3" firstAttribute="leading" secondItem="5s7-Qz-Lz7" secondAttribute="leading" constant="8" id="7Ia-0K-CZo"/>
+                                        <constraint firstItem="5s7-Qz-Lz7" firstAttribute="top" secondItem="ZeT-Z4-j8L" secondAttribute="top" constant="2" id="RIz-8b-9PO"/>
+                                        <constraint firstItem="hid-5K-ph3" firstAttribute="width" secondItem="5s7-Qz-Lz7" secondAttribute="width" id="Rtl-7D-upd"/>
+                                        <constraint firstItem="5s7-Qz-Lz7" firstAttribute="leading" secondItem="ZeT-Z4-j8L" secondAttribute="leadingMargin" id="U2y-af-OgV"/>
+                                        <constraint firstAttribute="bottom" secondItem="hid-5K-ph3" secondAttribute="bottom" constant="2" id="lE9-h7-HEJ"/>
+                                        <constraint firstItem="hid-5K-ph3" firstAttribute="top" secondItem="5s7-Qz-Lz7" secondAttribute="bottom" id="vPr-XD-McV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5s7-Qz-Lz7" secondAttribute="trailing" id="w4T-AK-tdE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="fileLabel" destination="hid-5K-ph3" id="sjk-hj-vAt"/>
+                                    <outlet property="fileName" destination="5s7-Qz-Lz7" id="rtW-rR-KZ7"/>
+                                    <segue destination="d46-6x-jcE" kind="show" id="YSp-oj-0nd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tgw-ea-D85" id="0gj-97-SkE"/>
+                            <outlet property="delegate" destination="Tgw-ea-D85" id="iyn-0s-tOk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECv-Is-jeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="-188"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="78b-au-Vjg">
             <objects>
@@ -127,7 +245,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1801" y="438"/>
+            <point key="canvasLocation" x="-1801" y="510"/>
         </scene>
         <!--Pdf Read View Controller-->
         <scene sceneID="iCk-nf-zmH">
@@ -160,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpN-Xy-ftb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1666.40625" y="1136.7496339677891"/>
+            <point key="canvasLocation" x="-1127" y="510"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aA0-sI-HMu">
@@ -179,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="-1822" y="-925"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Conterller-->
         <scene sceneID="QBF-4b-OH7">
             <objects>
-                <viewController id="o6F-Xd-c69" sceneMemberID="viewController">
+                <viewController id="o6F-Xd-c69" customClass="MainViewConterller" customModule="abbott_demo_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MhL-Gi-xgW"/>
                         <viewControllerLayoutGuide type="bottom" id="7HG-RO-Icx"/>
@@ -194,17 +312,26 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb8-JZ-s3n">
                                 <rect key="frame" x="20" y="928" width="984" height="418"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="本地資料"/>
+                                <connections>
+                                    <segue destination="Tgw-ea-D85" kind="show" id="hw0-H0-AAk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al3-sk-5Kc">
                                 <rect key="frame" x="20" y="474" width="984" height="418"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button2"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="歷史紀錄"/>
+                                <connections>
+                                    <segue destination="eqx-Kg-neW" kind="show" id="iwY-nt-7J7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-vh-C5Q">
                                 <rect key="frame" x="20" y="20" width="984" height="418"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="開始搜尋"/>
                                 <connections>
                                     <segue destination="9ah-8S-a4y" kind="show" id="p7z-tn-vFj"/>
                                 </connections>
@@ -232,5 +359,41 @@
             </objects>
             <point key="canvasLocation" x="-1127" y="-925"/>
         </scene>
+        <!--Pdf Read View Controller local-->
+        <scene sceneID="UUm-VV-BYo">
+            <objects>
+                <viewController id="d46-6x-jcE" customClass="PdfReadViewController_local" customModule="abbott_demo_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gmA-Hr-Nbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="57o-5C-XcM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6gK-Rx-wJe">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDA-46-0NY">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1346"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aDA-46-0NY" firstAttribute="leading" secondItem="6gK-Rx-wJe" secondAttribute="leading" id="7Hc-Tr-kDS"/>
+                            <constraint firstAttribute="trailing" secondItem="aDA-46-0NY" secondAttribute="trailing" id="9f1-ew-say"/>
+                            <constraint firstItem="57o-5C-XcM" firstAttribute="top" secondItem="aDA-46-0NY" secondAttribute="bottom" id="B7T-f6-DEz"/>
+                            <constraint firstItem="aDA-46-0NY" firstAttribute="top" secondItem="gmA-Hr-Nbb" secondAttribute="bottom" id="QGx-Nr-xE9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="aDA-46-0NY" id="aYF-bP-ady"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YsQ-Uy-K2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="534"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KqF-VI-S9i"/>
+    </inferredMetricsTieBreakers>
 </document>

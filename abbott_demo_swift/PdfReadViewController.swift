@@ -25,13 +25,6 @@ class PdfReadViewController: UIViewController {
         get_pdf(file_path: file_path!)
     }
     
-    func establish_web_view(){
-        web_view.frame = self.view.frame
-        web_view.center = self.view.center
-        web_view.center.y += 60
-        self.view.addSubview(web_view)
-    }
-    
     func get_pdf(file_path:String){
         Http_Center().get_file("http://127.0.0.1:8000/pdf_dir/" + file_path) { (data:Data) in
             // 指定寫入目錄
@@ -53,6 +46,17 @@ class PdfReadViewController: UIViewController {
     
 }
 
+class PdfReadViewController_local:PdfReadViewController{
+    override func get_pdf(file_path: String) {
+        let doc_path = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        // 指定檔名
+        let doc_path2 = doc_path.appendingPathComponent(file_path)
+        // 讀取
+        let requeat = NSURLRequest(url: doc_path2)
+        self.webView.loadRequest(requeat as URLRequest)
+        print("ccccc")
+    }
+}
 
 
 
