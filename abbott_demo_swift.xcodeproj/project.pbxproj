@@ -106,6 +106,7 @@
 		CF7EA0D41F5AFDA0006064CB /* MainViewConterller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewConterller.swift; sourceTree = "<group>"; };
 		CF7EA0D61F5AFDDC006064CB /* PublicVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicVar.swift; sourceTree = "<group>"; };
 		CF7EA0D81F5B06AE006064CB /* NOTES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NOTES.swift; sourceTree = "<group>"; };
+		CF7EA10F1F5B3B54006064CB /* SQLite.swift-master.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SQLite.swift-master.xcodeproj"; path = "../../Desktop/SQLite.swift-master/SQLite.swift-master.xcodeproj"; sourceTree = "<group>"; };
 		CFB003CD1F554A80003D836A /* abbott_demo_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abbott_demo_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB003D01F554A80003D836A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB003D21F554A80003D836A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 		CF7EA0B51F5AEE82006064CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF7EA10F1F5B3B54006064CB /* SQLite.swift-master.xcodeproj */,
 				CF7EA0BB1F5AF19B006064CB /* SQLite.xcodeproj */,
 				CF7EA0B61F5AEE82006064CB /* libsqlite3.tbd */,
 			);
@@ -173,6 +175,13 @@
 				CF7EA0CE1F5AF19B006064CB /* SQLite.framework */,
 				CF7EA0D01F5AF19B006064CB /* SQLiteTests tvOS.xctest */,
 				CF7EA0D21F5AF19B006064CB /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF7EA1101F5B3B54006064CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +356,10 @@
 			productRefGroup = CFB003CE1F554A80003D836A /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = CF7EA1101F5B3B54006064CB /* Products */;
+					ProjectRef = CF7EA10F1F5B3B54006064CB /* SQLite.swift-master.xcodeproj */;
+				},
 				{
 					ProductGroup = CF7EA0BC1F5AF19B006064CB /* Products */;
 					ProjectRef = CF7EA0BB1F5AF19B006064CB /* SQLite.xcodeproj */;
