@@ -140,4 +140,30 @@ class Http_Center{
         
         
     }
+    
+    func get_file(_ url:String,getdata:@escaping (_ data:Data)->Void){
+        var ouput:Data?
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
+            if error != nil{
+                print("連線錯誤")
+            }
+            else{
+                ouput = data!
+                if let res = response as? HTTPURLResponse{
+                    let status = res.statusCode
+                    if status != 200{
+                        print(response)
+                        print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+                    }
+                    
+                }
+                getdata(ouput!)
+            }
+        })
+        
+        task.resume()
+    }
 }

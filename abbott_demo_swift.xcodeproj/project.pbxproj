@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF7EA0B01F5A8ED4006064CB /* PdfReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7EA0AF1F5A8ED4006064CB /* PdfReadViewController.swift */; };
 		CFB003D11F554A80003D836A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB003D01F554A80003D836A /* AppDelegate.swift */; };
 		CFB003D31F554A80003D836A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB003D21F554A80003D836A /* TableViewController.swift */; };
 		CFB003D61F554A80003D836A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB003D41F554A80003D836A /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF7EA0AF1F5A8ED4006064CB /* PdfReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfReadViewController.swift; sourceTree = "<group>"; };
 		CFB003CD1F554A80003D836A /* abbott_demo_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abbott_demo_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB003D01F554A80003D836A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB003D21F554A80003D836A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -140,31 +142,16 @@
 		CFB004041F555E7F003D836A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CFB004081F556637003D836A /* ＥＴ */,
-				CFB004071F556624003D836A /* ＤＫ */,
-			);
-			name = controllers;
-			sourceTree = "<group>";
-		};
-		CFB004071F556624003D836A /* ＤＫ */ = {
-			isa = PBXGroup;
-			children = (
-				CFB003D21F554A80003D836A /* TableViewController.swift */,
-				CFB0040B1F5569B4003D836A /* TableViewCell.swift */,
-			);
-			name = "ＤＫ";
-			sourceTree = "<group>";
-		};
-		CFB004081F556637003D836A /* ＥＴ */ = {
-			isa = PBXGroup;
-			children = (
 				CFB004051F55622A003D836A /* EnteryView.swift */,
+				CFB003D21F554A80003D836A /* TableViewController.swift */,
+				CF7EA0AF1F5A8ED4006064CB /* PdfReadViewController.swift */,
+				CFB0040B1F5569B4003D836A /* TableViewCell.swift */,
 				CFB004021F555E05003D836A /* SearchBarController.swift */,
 				CFB003FE1F554AD7003D836A /* Http_center.swift */,
 				CFB004001F554B4D003D836A /* Tools.swift */,
 				CFB004091F55697A003D836A /* suport_func.swift */,
 			);
-			name = "ＥＴ";
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +295,7 @@
 				CFB0040C1F5569B4003D836A /* TableViewCell.swift in Sources */,
 				CFB004031F555E05003D836A /* SearchBarController.swift in Sources */,
 				CFB0040A1F55697A003D836A /* suport_func.swift in Sources */,
+				CF7EA0B01F5A8ED4006064CB /* PdfReadViewController.swift in Sources */,
 				CFB003D11F554A80003D836A /* AppDelegate.swift in Sources */,
 				CFB004061F55622A003D836A /* EnteryView.swift in Sources */,
 				CFB003FF1F554AD7003D836A /* Http_center.swift in Sources */,

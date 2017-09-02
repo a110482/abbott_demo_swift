@@ -23,7 +23,6 @@ class EntryView:UIViewController, UISearchBarDelegate{
             segue_table_view = segue.destination as? TableViewController
         }
     }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.characters.count >= 2{
             
@@ -37,12 +36,6 @@ class EntryView:UIViewController, UISearchBarDelegate{
                     DispatchQueue.main.async {
                         self.segue_table_view!.update_date(new_data_list: result_list)
                     }
-                    print("DDD")
-//                    for unit in return_dic!["result_list"] as! Array<Dictionary<String,AnyObject>>{
-//                        print(unit["file_path"]!)
-//                        print(unit["file_name"]!)
-//                        print(unit["tags"]!)
-//                    }
                 }
             })
         }
