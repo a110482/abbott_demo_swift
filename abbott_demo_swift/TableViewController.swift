@@ -13,6 +13,7 @@ import Foundation
 class TableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var tblFileList: UITableView!
     var data_list:Array<TableViewCell_type> = []
+    // 主要資料清單
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath) as! TableViewCell
         cell.fileName.text = data_list[indexPath.row].file_name
         var tag_str = ""
+        // cell 上要顯示的 tag 文字
         for tas_text in data_list[indexPath.row].tags{
             tag_str = "\(tag_str)  \(tas_text)"
         }
@@ -43,6 +45,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
         next_view.file_name = data_list[index].file_name
         next_view.file_path = data_list[index].file_path
     }
+    
     func update_date(new_data_list:Array<Dictionary<String,AnyObject>>){
         data_list = []
         for datas in new_data_list{
