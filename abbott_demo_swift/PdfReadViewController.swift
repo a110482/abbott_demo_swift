@@ -30,7 +30,6 @@ class PdfReadViewController: UIViewController {
         web_view.center = self.view.center
         self.view.addSubview(web_view)
     }
-    
     func get_pdf(file_path:String){
         print("http://127.0.0.1:8000/pdf_dir/" + file_path)
         //let file_path_part = file_path.components(separatedBy: ".")
