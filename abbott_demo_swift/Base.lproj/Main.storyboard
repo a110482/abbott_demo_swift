@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,6 +36,11 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="je3-El-oAv" firstAttribute="leading" secondItem="DIq-wO-ham" secondAttribute="leading" id="DRb-5k-8wZ"/>
+                            <constraint firstAttribute="trailing" secondItem="je3-El-oAv" secondAttribute="trailing" id="akq-Nx-k9S"/>
+                            <constraint firstItem="je3-El-oAv" firstAttribute="top" secondItem="DIq-wO-ham" secondAttribute="topMargin" id="bUL-TR-10X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0rG-tH-4cO"/>
                     <connections>
@@ -55,38 +60,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="fileListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileListCell" id="Nxu-78-0m4" customClass="TableViewCell" customModule="abbott_demo_swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxu-78-0m4" id="iNa-7u-gCw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-yj-6og">
-                                            <rect key="frame" x="8" y="8" width="359" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-yj-6og">
+                                            <rect key="frame" x="8" y="2" width="359" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urS-Ts-tdn">
-                                            <rect key="frame" x="8" y="25" width="359" height="13"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="urS-Ts-tdn">
+                                            <rect key="frame" x="16" y="19" width="359" height="22.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                             <color key="textColor" red="0.0" green="0.52941176470588236" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59660560344827585" colorSpace="calibratedRGB"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="urS-Ts-tdn" firstAttribute="leading" secondItem="hHZ-yj-6og" secondAttribute="leading" id="0hd-Kq-DGz"/>
+                                        <constraint firstItem="urS-Ts-tdn" firstAttribute="leading" secondItem="hHZ-yj-6og" secondAttribute="leading" constant="8" id="0hd-Kq-DGz"/>
                                         <constraint firstItem="hHZ-yj-6og" firstAttribute="leading" secondItem="iNa-7u-gCw" secondAttribute="leadingMargin" id="Brn-Ka-Pcg"/>
                                         <constraint firstItem="urS-Ts-tdn" firstAttribute="width" secondItem="hHZ-yj-6og" secondAttribute="width" id="Uzz-RX-hgm"/>
+                                        <constraint firstAttribute="bottom" secondItem="urS-Ts-tdn" secondAttribute="bottom" constant="2" id="XkE-Yf-8eo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="hHZ-yj-6og" secondAttribute="trailing" id="cPW-BJ-cXb"/>
-                                        <constraint firstItem="hHZ-yj-6og" firstAttribute="top" secondItem="iNa-7u-gCw" secondAttribute="topMargin" id="kLL-Li-Epb"/>
+                                        <constraint firstItem="hHZ-yj-6og" firstAttribute="top" secondItem="iNa-7u-gCw" secondAttribute="top" constant="2" id="kLL-Li-Epb"/>
                                         <constraint firstItem="urS-Ts-tdn" firstAttribute="top" secondItem="hHZ-yj-6og" secondAttribute="bottom" id="ncJ-QH-AMz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                 <connections>
                                     <outlet property="fileLabel" destination="urS-Ts-tdn" id="8PJ-TN-jPF"/>
                                     <outlet property="fileName" destination="hHZ-yj-6og" id="Ud0-06-xUC"/>
