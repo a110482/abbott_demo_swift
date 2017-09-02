@@ -13,6 +13,7 @@ class PdfReadViewController: UIViewController {
     var file_name:String?
     var file_path:String?
     var web_view = UIWebView()
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         self.title = file_name
@@ -20,7 +21,7 @@ class PdfReadViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        establish_web_view()
+        //establish_web_view()
         get_pdf(file_path: file_path!)
     }
     
@@ -43,7 +44,7 @@ class PdfReadViewController: UIViewController {
                 
                 // 讀取
                 let requeat = NSURLRequest(url: doc_path2)
-                self.web_view.loadRequest(requeat as URLRequest)
+                self.webView.loadRequest(requeat as URLRequest)
             } catch {
                 print("error writing to url:", doc_path2, error)
             }
