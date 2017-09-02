@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je3-El-oAv">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="je3-El-oAv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xA1-Vi-GQE">
@@ -36,6 +35,11 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="je3-El-oAv" firstAttribute="leading" secondItem="DIq-wO-ham" secondAttribute="leading" id="DRb-5k-8wZ"/>
+                            <constraint firstAttribute="trailing" secondItem="je3-El-oAv" secondAttribute="trailing" id="akq-Nx-k9S"/>
+                            <constraint firstItem="je3-El-oAv" firstAttribute="top" secondItem="DIq-wO-ham" secondAttribute="topMargin" id="bUL-TR-10X"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="search_bar" destination="je3-El-oAv" id="QcG-A0-uAD"/>
@@ -60,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxu-78-0m4" id="iNa-7u-gCw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-yj-6og">
@@ -88,11 +92,11 @@
                                         <constraint firstItem="urS-Ts-tdn" firstAttribute="top" secondItem="hHZ-yj-6og" secondAttribute="bottom" id="ncJ-QH-AMz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                 <connections>
                                     <outlet property="fileLabel" destination="urS-Ts-tdn" id="8PJ-TN-jPF"/>
                                     <outlet property="fileName" destination="hHZ-yj-6og" id="Ud0-06-xUC"/>
                                 </connections>
-                                <inset key="separatorInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
