@@ -8,5 +8,5 @@
 
 import Foundation
 public var sql_database = SQL_center()
-
-
+public var server_host = "http://52.8.130.80:8001/"
+public var media_dir = server_host + "pdf_dir/"

@@ -52,7 +52,7 @@ class TableViewController: UITableViewController {
         return [save_btn]
     }
     func get_pdf(file_path:String, file_name:String, tags:Array<String>){
-        Http_Center().get_file("http://127.0.0.1:8000/pdf_dir/" + file_path) { (data:Data) in
+        Http_Center().get_file(media_dir + file_path) { (data:Data) in
             // 指定寫入目錄
             let doc_path = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             // 指定檔名
