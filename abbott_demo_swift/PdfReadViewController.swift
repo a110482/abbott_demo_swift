@@ -26,6 +26,7 @@ class PdfReadViewController: UIViewController {
     }
     
     func get_pdf(file_path:String){
+        print(media_dir + file_path)
         Http_Center().get_file(media_dir + file_path) { (data:Data) in
             // 指定寫入目錄
             let doc_path = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
