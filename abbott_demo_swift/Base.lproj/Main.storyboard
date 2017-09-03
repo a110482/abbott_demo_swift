@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JQY-hW-t59">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JQY-hW-t59">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fzx-d5-w2F" id="OAB-WB-NfU">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-Aq-RDk">
@@ -129,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbB-Lm-ndZ" id="ZeT-Z4-j8L">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-Qz-Lz7">
@@ -189,7 +190,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxu-78-0m4" id="iNa-7u-gCw">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="檔案名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-yj-6og">
@@ -256,11 +257,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2wm-So-HHP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q9O-tv-h1X">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1258"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-cO-4VS">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1258"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -284,7 +285,7 @@
         <scene sceneID="aA0-sI-HMu">
             <objects>
                 <navigationController id="JQY-hW-t59" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RM0-Ru-Ocr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RM0-Ru-Ocr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.15083701250000001" green="0.83450589009999998" blue="0.77773329020000004" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
@@ -310,7 +311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb8-JZ-s3n">
-                                <rect key="frame" x="20" y="928" width="984" height="418"/>
+                                <rect key="frame" x="20" y="1298" width="984" height="48"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="本地資料"/>
@@ -319,7 +320,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al3-sk-5Kc">
-                                <rect key="frame" x="20" y="474" width="984" height="418"/>
+                                <rect key="frame" x="20" y="1214" width="984" height="48"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="歷史紀錄"/>
@@ -328,7 +329,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-vh-C5Q">
-                                <rect key="frame" x="20" y="20" width="984" height="418"/>
+                                <rect key="frame" x="102.5" y="84" width="819" height="341.5"/>
                                 <color key="backgroundColor" red="0.50766919150000001" green="0.50219578730000003" blue="0.83450589009999998" alpha="0.80329122340000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="開始搜尋"/>
@@ -341,16 +342,15 @@
                         <constraints>
                             <constraint firstItem="cb8-JZ-s3n" firstAttribute="trailing" secondItem="h8Q-wc-nkD" secondAttribute="trailingMargin" id="2Ux-e1-c2F"/>
                             <constraint firstItem="cb8-JZ-s3n" firstAttribute="leading" secondItem="h8Q-wc-nkD" secondAttribute="leadingMargin" id="6Dg-Pl-kX6"/>
-                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="top" secondItem="h8Q-wc-nkD" secondAttribute="topMargin" constant="20" id="950-WZ-LLb"/>
                             <constraint firstItem="7HG-RO-Icx" firstAttribute="top" secondItem="cb8-JZ-s3n" secondAttribute="bottom" constant="20" id="Aye-2r-Qgc"/>
-                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="height" secondItem="al3-sk-5Kc" secondAttribute="height" id="CiA-A4-sKR"/>
+                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="top" secondItem="MhL-Gi-xgW" secondAttribute="bottom" constant="20" id="JbA-Em-qx9"/>
                             <constraint firstItem="cb8-JZ-s3n" firstAttribute="top" secondItem="al3-sk-5Kc" secondAttribute="bottom" constant="36" id="RfQ-Ss-keq"/>
-                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="trailing" secondItem="h8Q-wc-nkD" secondAttribute="trailingMargin" id="XGV-MK-TJJ"/>
-                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="leading" secondItem="h8Q-wc-nkD" secondAttribute="leadingMargin" id="drg-ys-z7w"/>
+                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="width" secondItem="h8Q-wc-nkD" secondAttribute="width" multiplier="80%" id="TKW-Fc-gOx"/>
+                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="height" secondItem="h8Q-wc-nkD" secondAttribute="height" multiplier="25%" id="gQK-lD-KBn"/>
                             <constraint firstItem="al3-sk-5Kc" firstAttribute="height" secondItem="cb8-JZ-s3n" secondAttribute="height" id="jQS-mK-5Rv"/>
                             <constraint firstItem="al3-sk-5Kc" firstAttribute="leading" secondItem="h8Q-wc-nkD" secondAttribute="leadingMargin" id="lXg-fI-oys"/>
+                            <constraint firstItem="F4l-vh-C5Q" firstAttribute="centerX" secondItem="h8Q-wc-nkD" secondAttribute="centerX" id="ojR-IC-dUs"/>
                             <constraint firstItem="al3-sk-5Kc" firstAttribute="trailing" secondItem="h8Q-wc-nkD" secondAttribute="trailingMargin" id="thk-rR-Rav"/>
-                            <constraint firstItem="al3-sk-5Kc" firstAttribute="top" secondItem="F4l-vh-C5Q" secondAttribute="bottom" constant="36" id="yHO-EB-4Bf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IcU-Uv-vHH"/>
@@ -372,7 +372,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDA-46-0NY">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="1346"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -394,6 +394,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KqF-VI-S9i"/>
+        <segue reference="jTM-dF-LA1"/>
     </inferredMetricsTieBreakers>
 </document>

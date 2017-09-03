@@ -15,4 +15,7 @@ class MainViewConterller: UIViewController {
         sql_database.connect_sql()
         sql_database.establish_all_table()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }

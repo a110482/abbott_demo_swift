@@ -21,6 +21,9 @@ class LocalFileTableViewController: UITableViewController {
         print("-----------")
         print(get_all_file()!)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     override func viewDidAppear(_ animated: Bool) {
         reload_table()
     }

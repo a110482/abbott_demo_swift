@@ -19,6 +19,9 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         print("--viewDidLoad--")
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath) as! TableViewCell
         cell.fileName.text = data_list[indexPath.row].file_name

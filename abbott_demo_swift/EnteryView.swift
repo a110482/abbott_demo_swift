@@ -18,6 +18,9 @@ class EntryView:UIViewController, UISearchBarDelegate{
     override func viewDidLoad() {
         search_bar.delegate = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "table_segue"{
             segue_table_view = segue.destination as? TableViewController
