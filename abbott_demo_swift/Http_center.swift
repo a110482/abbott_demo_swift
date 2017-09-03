@@ -9,9 +9,8 @@
 import Foundation
 
 class Http_Center{
-    let local_host = "http://127.0.0.1:8000/"
     func request_data(_ mode:String, send_dic:Dictionary<String,AnyObject>,InViewAct: @escaping (_ returnData:Dictionary<String,AnyObject>?)->Void){
-        let url = "\(local_host)demo_url/"
+        let url = "\(server_host)demo_url/"
         let jsonData = json_dumps2(send_dic as NSDictionary)
         let sendData = "mode=\(mode);msg=\(jsonData!)"
         ajax(url, sendDate: sendData, retryCount:5) { (returnDic) in
@@ -32,7 +31,7 @@ class Http_Center{
         request.httpMethod = "POST"
 //        request.allHTTPHeaderFields = ["Cookie":cookie_new.get_cookie()]
 //        request.allHTTPHeaderFields = ["X-CSRFToken":cookie_new.get_csrf()]
-        request.allHTTPHeaderFields = ["Referer":"\(local_host)"]
+        request.allHTTPHeaderFields = ["Referer":"\(server_host)"]
         request.httpBody = sendDate.data(using: String.Encoding.utf8)
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
@@ -91,7 +90,7 @@ class Http_Center{
             //        print(isInternetAvailable())
             request.allHTTPHeaderFields = ["Cookie":cookie!]
             request.allHTTPHeaderFields = ["X-CSRFToken":csrf!]
-            request.allHTTPHeaderFields = ["Referer":"\(local_host)"]
+            request.allHTTPHeaderFields = ["Referer":"\(server_host)"]
             request.httpBody = sendDate.data(using: String.Encoding.utf8)
             let session = URLSession.shared
             let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
