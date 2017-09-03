@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190B40161F5C20C700827392 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B40151F5C20C700827392 /* NavViewController.swift */; };
 		4E9D466287C0A9A98E12DF50 /* Pods_abbott_demo_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15ED09067B2223710422EF2 /* Pods_abbott_demo_swiftUITests.framework */; };
 		79514375A97FA09300D00A8E /* Pods_abbott_demo_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5912BC14E3AEB013D93C1F17 /* Pods_abbott_demo_swiftTests.framework */; };
 		B384D39A9D7428BA5B8CB465 /* Pods_abbott_demo_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0629240407C0E26D95BF5C8 /* Pods_abbott_demo_swift.framework */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		17D6B29BB3DF38D9DEE085AB /* Pods-abbott_demo_swiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abbott_demo_swiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-abbott_demo_swiftUITests/Pods-abbott_demo_swiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		190B40151F5C20C700827392 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		5912BC14E3AEB013D93C1F17 /* Pods_abbott_demo_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_abbott_demo_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		822A8E0199297955CE075B22 /* Pods-abbott_demo_swiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abbott_demo_swiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-abbott_demo_swiftUITests/Pods-abbott_demo_swiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A9C86F3EEE7E425C0D70EE0 /* Pods-abbott_demo_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abbott_demo_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-abbott_demo_swift/Pods-abbott_demo_swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				CFB004091F55697A003D836A /* suport_func.swift */,
 				CF7EA0B91F5AEFAB006064CB /* Sql_center.swift */,
 				CF7EA0D81F5B06AE006064CB /* NOTES.swift */,
+				190B40151F5C20C700827392 /* NavViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB003D31F554A80003D836A /* TableViewController.swift in Sources */,
+				190B40161F5C20C700827392 /* NavViewController.swift in Sources */,
 				CF7EA0D51F5AFDA0006064CB /* MainViewConterller.swift in Sources */,
 				CFB0040C1F5569B4003D836A /* TableViewCell.swift in Sources */,
 				CFB004031F555E05003D836A /* SearchBarController.swift in Sources */,

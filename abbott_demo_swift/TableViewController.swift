@@ -21,6 +21,10 @@ class TableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        
+        // navbar 字跟顏色調整
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"返回", style:.plain, target:nil, action:nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fileListCell", for: indexPath) as! TableViewCell

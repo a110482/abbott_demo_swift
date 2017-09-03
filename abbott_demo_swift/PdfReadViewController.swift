@@ -17,6 +17,7 @@ class PdfReadViewController: UIViewController {
     
     override func viewDidLoad() {
         self.title = file_name
+        webView.scalesPageToFit = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

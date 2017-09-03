@@ -23,6 +23,8 @@ class LocalFileTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"返回", style:.plain, target:nil, action:nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     override func viewDidAppear(_ animated: Bool) {
         reload_table()
